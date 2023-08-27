@@ -2,4 +2,5 @@
 Learning JavaScript
 <br>
 ## Following Projects Are Avalible 
-### 1st Color Flipper
+1. Color Flipper
+2. Counter
