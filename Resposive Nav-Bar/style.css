@@ -1,0 +1,99 @@
+/* Changing Default Styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f3f5;
+
+}
+
+/* Default Link Styling */
+a{
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+}
+
+/* Navigation Bar */
+.nav-bar{
+    background-color: #fff;
+    box-shadow: 0px 5px 15px #00000020;
+    width: 100vw;
+    min-width: 80vw;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Logo */
+.logo h1 span{
+    color: #55aae8;
+}
+
+.mob{
+    display: none;
+}
+/* Links */
+.nav-bar ul{
+    color: #000;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Resposiveness */
+@media screen and (max-width : 800px)
+{
+    /* Hidding Links */
+    .nav-bar ul{
+        display: none;
+    }
+    /* Nav - Bar */
+    .nav-bar{
+        justify-content: space-between;
+        padding: 0 2.5rem;
+        position: relative;
+    }
+    .mob{
+        display: inline-block;
+    }
+    /* Adjusting Links */
+
+    .nav-bar .mob-links{
+        width: 40vw;
+        height: 60vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        animation: nav 1s ease-in;
+        z-index: -1;
+        
+    }
+     /* Adding Animations */
+    @keyframes nav {
+        from{
+            top:-500%;
+        }
+        to{
+            top:100%;
+        
+        }
+    }
+    .nav-links li{
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .nav-links li:hover{
+        transform: scale(1.2);
+    }
+}
