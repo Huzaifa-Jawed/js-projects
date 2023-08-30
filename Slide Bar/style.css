@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    background-color: #f4f3f5;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* Styling Buttons */
+button{
+    background: transparent;
+    border: transparent;
+}
+
+
+
+ul{
+    list-style-type: none;
+}
+/* Header */
+
+
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+/* Nav-Bar */
+.nav-bar{
+    position: relative;
+}
+/* Navigation Icon  Bar's*/
+.nav-icon{
+    width: 100vw;
+    padding: 1.5rem;
+    /* To move it In Right Corner */
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.nav-icon button i{
+    animation: beat 1s linear infinite;
+    font-size: 2.25rem;
+    color: #49A6E9;
+}
+/* Animation  */
+@keyframes beat {
+    0% , 100%
+    {
+        transform: scale(1.25);
+    }
+    50%
+    {
+        transform: scale(1);
+    }
+    
+}
+
+
+/* Nav Items */
+.nav-items{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%);
+    height: 100vh;
+    width: 400px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    transition: all .5s linear;
+
+}
+.show-nav-items{
+    transform: translate(0);
+}
+
+
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+/* Slide-Bar Header */
+.slide-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:1.5rem;
+}
+.slide-header h1 span{
+    color: #49A6E9;
+}
+.slide-header .fa-xmark{
+    color: red;
+    font-size: 1.5rem;
+    
+}
+.slide-header .fa-xmark:hover{
+    animation: rotate 0.25s linear forwards;
+
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-180deg);
+    }
+    
+}
+
+
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+
+/* Links */
+.nav-items .nav-links{
+    text-transform: capitalize;
+    font-size: 1.25rem;
+}
+.nav-items .nav-links  li{
+    margin: 1.5rem 0;
+}
+/* Social Icons */
+.nav-items .social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+.social-icons li i{
+    color: #49A6E9;
+}
+/* Hover Effect */
+.social-icons li i:hover{
+    color: #0f2636;
+}
+
+
+@media screen and (max-width :  696px) {
+    .nav-items{
+        width: 100vw;
+    }
+    
+}
