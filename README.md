@@ -6,3 +6,4 @@ Learning JavaScript
 2. Counter
 3. Review's
 4. Resposnsive Nav-Bar
+5. Slide Bar
