@@ -7,3 +7,4 @@ Learning JavaScript
 3. Review's
 4. Resposnsive Nav-Bar
 5. Slide Bar
+6. Model Project
