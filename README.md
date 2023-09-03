@@ -8,3 +8,4 @@ Learning JavaScript
 4. Resposnsive Nav-Bar
 5. Slide Bar
 6. Model Project
+7. Added Question/Answer Project
