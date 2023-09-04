@@ -1,0 +1,142 @@
+/* Fonts */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --golden-color : rgb(182, 138, 27);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    background-color: hsl(210, 36%, 96%);
+}
+
+/* Main */
+main{
+    margin: auto;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.menu{
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.menu .menu-title{
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+.btn-container{
+    margin-bottom: 4rem;
+}
+.btn{
+    padding: 0.35rem .75rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    border-radius: .35rem;
+    border:2px solid var(--golden-color);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: .5rem;
+}
+.btn:hover{
+    background-color: var(--golden-color);
+    color: #fff;
+
+}
+
+
+.sec-center{
+    width: 85vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* Arranging Menu-Item's */
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image{
+
+    height: 150px;
+    border: 0.25rem solid var(--golden-color);
+    border-radius: .35rem;
+}
+
+.menu-items{
+    max-width: 40rem;
+    display: grid;
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.35rem;
+    text-align: justify;
+}
+
+.menu-items .item-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: .5rem;
+    border-bottom: 1px dotted #222;
+    text-transform: capitalize;
+        letter-spacing: 0.2rem;
+}
+.menu-items .item-header .item-name{    
+    font-family: 'Roboto', sans-serif;    
+    font-size: 1rem;
+}
+.menu-items .item-header .item-price{
+    color: var(--golden-color);
+}
+
+.menu-items .item-info .item-description{
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: hsl(210, 22%, 49%);
+}
+
+
+
+
+@media screen and (max-width:1200px){
+    .sec-center{
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media screen and (max-width:786px){
+    .menu-items{
+        grid-template-columns: 1fr;
+        gap: 1rem 2rem;
+        max-width: 25rem;
+    }
+    .menu-items .image{
+        height: 200px;
+    }
+    
+}
+@media screen and (max-width:480px){
+    .btn{
+        margin: 0 0rem;
+    }
+}
