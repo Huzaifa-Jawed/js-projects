@@ -11,3 +11,4 @@ Learning JavaScript
 7. Question/Answer Project
 8. Restaurant Menu Card
 9. Background-Video Project
+10. Responsive Scroll Project
