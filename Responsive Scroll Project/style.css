@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* For Smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+/* Body */
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Sections */
+section{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Main */
+.main{
+    height: 100vh;
+    /* height: auto; */
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(./hero-bcg.jpeg) center/cover no-repeat;
+;
+
+}
+
+/*--------------------------------------------*/
+/*                Navigation-Bar              */
+/* ------------------------------------------ */
+header{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1rem 1.5rem;
+}
+.nav-bar{
+    width: 90%;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ----------  Navigation-Header  ---------- */
+.nav-header .logo{
+    height: 50px;
+}
+
+.nav-header .nav-toggle{
+    display: none;
+}
+/* ----------  Navigation-Links  ---------- */
+.links-container{
+    height: auto;
+    overflow: hidden;
+    
+}
+.nav-bar .links-container .nav-links{
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+
+/* Fixed nav Bar */
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.fixed .links-container .nav-links li a{
+    color: hsl(209, 61%, 16%);
+}
+.fixed .links-container .nav-links li a:hover{
+    color: hsla(hue, saturation, lightness, alpha);
+}
+
+
+
+.links-container li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .25rem;
+    font-size: 1.25rem;
+    transition: all .3s linear;
+}
+.links-container li a:hover {
+    color: hsla(182, 63%, 54%);
+}
+
+ul:hover a{
+    filter: blur(2px);
+}
+ul li:hover a{
+    filter: blur(0px);
+}
+/*--------------------------------------------*/
+/*  ----------------  Banner  --------------- */
+/* ------------------------------------------ */
+.banner{
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.container{
+    max-width: 90%;
+    color: #fff;
+}
+/* Heading  */
+.container h1{
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+/* Paragraph */
+.container p{
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    line-height: 1.25;
+}
+
+
+/* Button */
+.container .btn{
+    background-color: transparent;
+    border: 2px solid #fff;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all .3s linear;
+}
+/* Button Hover Effect */
+.container .btn:hover{
+    background-color: #fff;
+    
+}
+.container .btn:hover > a{
+        color: hsla(182, 63%, 54%);
+}
+.container .btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--------------------------------------------*/
+/*  -------------  About Section  ----------- */
+/* ------------------------------------------ */
+section:not(.main)
+{
+    padding: 2rem;
+}
+section:not(.main) h1
+{
+    /* padding: 2rem; */
+    text-align: center;
+    font-size: 3rem;
+}
+section:nth-child(Even)
+{
+    background-color: hsl(210, 36%, 96%);
+}
+section:not(.main) h1 span
+{
+    color: hsla(182, 63%, 54%);
+}
+
+
+/*--------------------------------------------*/
+/*  -------------  Footer Section  ----------- */
+/* ------------------------------------------ */
+.footer-sec{
+    padding: 5rem 2rem;
+    background-color: hsl(209, 61%, 16%);
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/* Back to Top Link */
+.top-link {
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: hsla(182, 63%, 54%);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: .5rem;
+    color: var(--clr-white);
+    animation: bounce 2s ease-in-out infinite;
+    text-decoration: none;
+    visibility: hidden;
+    z-index: -100;
+}
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*--------------------------------------------*/
+/*  ----------  Respnsive Nav-Bar  ---------- */
+/* ------------------------------------------ */
+@media screen and (min-width:768.1px) {
+    .links-container{
+        height: auto !important;
+    }
+}
+
+
+/*--------------------------------------------*/
+/*  ----------  Respnsive Nav-Bar  ---------- */
+/* ------------------------------------------ */
+@media screen and (max-width:768px) {
+    body{
+        font-size: .875rem;
+        line-height: 1.5;
+    }
+    header{
+        background-color: #fff;
+        
+    }
+    .nav-header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .nav-header .nav-toggle{
+        display: block;
+        font-size: 2rem;  
+    }
+    .nav-toggle:hover 
+    {
+        color: hsla(182, 63%, 54%);
+    }
+
+
+    .nav-bar{
+        flex-direction: column;
+        /* display: grid;
+        grid-template-rows: auto auto; */
+    }
+
+    .links-container{
+        background-color: #fff;
+        height: 0px;
+        overflow: hidden;
+        text-align: center;
+        transition: all 0.3s linear;    
+    }
+
+    .links-container .nav-links{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .links-container li a
+    {
+        color:hsl(210, 22%, 49%)
+    }
+    .links-container li a:hover{
+        color: hsl(209, 61%, 16%);
+    }
+
+    /* Banner */
+    .container h1{
+        font-size: 3.5rem;
+    }
+    .container p{
+        max-width: 25rem;
+    }
+
+    /* Sections */
+    section:not(.main) h1
+    {
+        font-size: 2.5rem;
+    }
+}
+
+
+/*--------------------------------------------*/
+/*  ----------  Respnsive Nav-Bar  ---------- */
+/* ------------------------------------------ */
+@media screen and (max-width:425px) {
+    /* Navigation Bar */
+    .nav-header .logo{
+        height: 40px;
+    }
+    .nav-header .nav-toggle{
+        font-size: 1.5rem;
+    }
+
+    .links-container li a{
+    font-size: 1.25rem;
+}
+    
+    
+    /* Banner */
+    .container{
+        width: 90%;
+    }
+    .container h1{
+        font-size: 2.5rem;
+    }
+
+    /* Sections */
+    section:not(.main) h1
+    {
+        font-size: 1.5rem;
+    }
+}
